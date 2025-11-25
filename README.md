@@ -1,3 +1,14 @@
+# 📌 Hospital API – Software Testing & Mutation Testing Project
+
+**Course:** Software Testing
+**Team Members:**
+
+* **Manas Ranjan Manna** – Developed the complete Hospital API backend
+* **Ayan Pushp** – Designed test cases (unit + integration)
+* **Both** – Implemented mutation testing using Stryker
+
+
+
 If want to run locally,first install the packages using command 
 ->npm install
 
@@ -34,28 +45,6 @@ While creating or changing status of patient,use any of these 4 status codes
 
 
 
-Here is a clean, complete **README.md** you can place directly in your GitHub repo.
-It follows your project-instruction requirements and includes:
-• Link to repository
-• Test-case strategy
-• Unit + Integration test cases with complete code
-• Mutation-testing tools used
-• Mutation-testing operators used
-• Results summary (with placeholders where you will attach screenshots)
-• Contributions section (Manas + Ayan)
-
-You can copy-paste this entire file as **README.md**.
-
----
-
-# 📌 Hospital API – Software Testing & Mutation Testing Project
-
-**Course:** Software Testing
-**Team Members:**
-
-* **Manas Ranjan Manna** – Developed the complete Hospital API backend
-* **Ayan Pushp** – Designed test cases (unit + integration)
-* **Both** – Implemented mutation testing using Stryker
 
 ---
 
