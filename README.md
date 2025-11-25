@@ -72,7 +72,7 @@ The work includes:
 
 ## 🧪 2. Test Case Strategy
 
-The following strategies (listed in project instructions) were used:
+The following strategies were used:
 
 ### **Unit Testing Strategy: Functional/Logic-based testing**
 
@@ -155,7 +155,7 @@ This is expected for a beginner-level project with limited tests.
 
 ---
 
-# **UNIT TEST CASES (3 Required)**
+# **UNIT TEST CASES**
 
 ### File: `test/unit/doctor_controller.spec.js`
 
@@ -210,7 +210,7 @@ describe("Doctor Controller Unit Tests", () => {
 
 ---
 
-# **INTEGRATION TEST CASES (3 Required)**
+# **INTEGRATION TEST CASES**
 
 ### File: `test/integration/doctor_patient_integration.spec.js`
 
@@ -338,13 +338,6 @@ models                    | ~16     | 5      | 26       | 0
 routes                    | ~52     | 13     | 12       | 0
 ```
 
-### 📸 Screenshot placeholders
-
-*Add the screenshots from your local generated report here:*
-
-```
-/reports/mutation/mutation.html
-```
 
 ---
 
@@ -386,9 +379,3 @@ npx stryker run
 ```
 
 ---
-
-If you want, I can also generate:
-
-✔ A PDF version
-✔ A final submission report in university format
-✔ A PPT summarizing your work
