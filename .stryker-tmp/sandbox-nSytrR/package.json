@@ -1,0 +1,33 @@
+{
+  "engines": {
+    "node": ">=14.20.1"
+  },
+  "name": "hospital-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require ./test/mocha-setup.js \"test/**/*.spec.js\" --timeout 20000",
+    "start": "nodemon index.js",
+    "mutation": "stryker run"
+  },
+  "author": "Manas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^9.4.0",
+    "@stryker-mutator/html-reporter": "^3.1.0",
+    "@stryker-mutator/mocha-runner": "^9.4.0",
+    "chai": "^6.2.1",
+    "mocha": "^11.7.5",
+    "mongodb-memory-server": "^10.3.0",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.4"
+  }
+}

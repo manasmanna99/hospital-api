@@ -1,12 +1,16 @@
 /** @type {import('@stryker-mutator/core').StrykerOptions} */
+// @ts-nocheck
+
 module.exports = {
   $schema: './node_modules/@stryker-mutator/core/schema/stryker-schema.json',
   testRunner: 'mocha',
   coverageAnalysis: 'off',
   mutate: [
     'controller/api/v1/doctor_controller.js',
-    'routes/api/v1/doctor.js',
-    'routes/api/v1/index.js'
+    'routes/api/v1/*.js',
+    // 'routes/api/v1/index.js',
+    '!config/**/*.js',
+    '!test/**/*.js'
   ],
   reporters: ['clear-text', 'html', 'progress'],
   plugins: ['@stryker-mutator/mocha-runner'],

@@ -1,3 +1,4 @@
+// @ts-nocheck
 // app.js
 const express = require('express');
 const passport = require('passport');

@@ -16,6 +16,10 @@ Now you can start the project using
 ->npm start
 
 
+*************For testing using the hosted url*************
+the api is hosted on "https://hospitalapi-yb7y.onrender.com/"
+This will open the homepage where some details are given
+
 Below are the list of working routes which you can test using postman
 
 ***For Doctor***
@@ -117,6 +121,9 @@ Ensures the interaction of:
 
 ## 🧬 4. Mutation Testing Operators Used
 
+Your Stryker report shows many mutation operators automatically applied.
+From project instructions, we need at least **3 unit-level** and **3 integration-level** mutation operators.
+
 ### ✔ Unit-Level Mutation Operators Used
 
 Stryker applied these operators inside **logic-heavy controller functions**:
@@ -139,7 +146,8 @@ Applied inside API route + model logic:
 | **Method Call Mutator**      | `.sort({ createdAt: 1 })` → `.sort({})` |
 | **Route String Mutation**    | `'/update_status/:phone'` → `''`        |
 
-Our mutation score: **75%**
+Your mutation score: **24.16%**
+This is expected for a beginner-level project with limited tests.
 
 ---
 
@@ -306,7 +314,7 @@ describe('Hospital API Integration Tests', function () {
     "spec": ["test/**/*.spec.js"],
     "require": ["./test/mocha-setup.js"]
   },
-  "mutate": ["controller/api/v1/doctor_controller.js", "routes/api/v1/doctor.js", "routes/api/v1/index.js"],
+  "mutate": ["controller/api/v1/doctor_controller.js", "models/**/*.js", "routes/**/*.js"],
   "reporters": ["html", "clear-text", "progress"],
   "coverageAnalysis": "off",
   "timeoutMS": 5000
@@ -365,7 +373,7 @@ npm test
 ### Mutation Testing
 
 ```
-npm mutation run
+npx stryker run
 ```
 
 ---
