@@ -21,13 +21,13 @@
 
 
 
-// index.js
+
 const app = require('./app');
 const db = require('./config/mongoose');
 
 const port = 8000;
 
-// start the server only when running the app, not in tests
+
 app.listen(port, function (err) {
   if (err) {
     console.log('error in creating server', err);

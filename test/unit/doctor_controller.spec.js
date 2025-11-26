@@ -1,4 +1,3 @@
-// test/unit/doctor_controller.spec.js
 const sinon = require('sinon');
 const { expect } = require('chai');
 

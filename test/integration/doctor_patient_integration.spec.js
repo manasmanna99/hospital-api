@@ -1,4 +1,3 @@
-// test/integration/doctor_patient_integration.spec.js
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const request = require('supertest');
@@ -45,7 +44,7 @@ describe('Hospital API Integration Tests', function () {
         confirm_password: 'pass123'
       });
 
-    // status is always 200 on success in your controller
+    // status is always 200 on success
     // with message 'You have successfully signed up'
     res.should.have.property('status', 200);
     res.body.should.have.property('message', 'You have successfully signed up');
@@ -58,7 +57,7 @@ describe('Hospital API Integration Tests', function () {
 
   // Integration Test 2: Doctor login and get JWT token
   it('should login doctor and return JWT token via /api/v1/doctors/login', async function () {
-    // first create a doctor directly in DB
+    // first created a doctor directly in DB
     await Doctor.create({
       name: 'Login Doctor',
       email: 'logindoc@example.com',
@@ -78,7 +77,7 @@ describe('Hospital API Integration Tests', function () {
     res.body.data.should.have.property('token');
   });
 
-  // Integration Test 3: Full flow - login, register patient, fetch status
+  // Integration Test 3: Full flow  login, register patient, fetch status
   it('should create a patient for a logged in doctor and fetch by status', async function () {
     // Create doctor and get token
     await Doctor.create({
@@ -96,7 +95,7 @@ describe('Hospital API Integration Tests', function () {
 
     const token = loginRes.body.data.token;
 
-    // Register patient (default status from your model is probably 'neg')
+    // Register patient (default status 'neg')
     const patientRes = await request(app)
       .post('/api/v1/patients/register')
       .set('Authorization', 'Bearer ' + token)
